@@ -45,14 +45,14 @@ export function Testimonials() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="p-8 rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-sm relative"
+                            className="p-6 md:p-8 rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-sm relative mx-2 sm:mx-0"
                         >
-                            <div className="flex gap-1 mb-6 text-yellow-400">
+                            <div className="flex gap-1 mb-5 md:mb-6 text-yellow-400">
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <Star key={i} className="w-5 h-5 fill-current" />
                                 ))}
                             </div>
-                            <p className="text-lg text-neutral-700 dark:text-neutral-300 mb-8 italic">
+                            <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-300 mb-6 md:mb-8 italic">
                                 "{testimonial.content}"
                             </p>
                             <div className="flex items-center gap-4">

@@ -32,9 +32,9 @@ export function About() {
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-pink-500/20 mix-blend-overlay z-10" />
                         </div>
                         {/* Stats Badge */}
-                        <div className="absolute -bottom-6 -right-6 md:-right-10 bg-background border border-black/10 dark:border-white/10 p-6 rounded-2xl shadow-xl flex items-center gap-4 z-20">
-                            <div className="text-4xl font-bold text-gradient">50+</div>
-                            <div className="text-sm text-neutral-400 leading-tight">Projects <br /> Completed</div>
+                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:-right-10 bg-background border border-black/10 dark:border-white/10 p-4 sm:p-6 rounded-2xl shadow-xl flex items-center gap-3 sm:gap-4 z-20 w-[90%] sm:w-auto justify-center sm:justify-start">
+                            <div className="text-3xl sm:text-4xl font-bold text-gradient">50+</div>
+                            <div className="text-xs sm:text-sm text-neutral-400 leading-tight">Projects <br /> Completed</div>
                         </div>
                     </motion.div>
 

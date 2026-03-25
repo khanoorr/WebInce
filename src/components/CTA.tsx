@@ -15,12 +15,12 @@ export function CTA() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-white/80 dark:bg-background/40 backdrop-blur-xl border border-black/10 dark:border-white/10 p-12 md:p-16 rounded-3xl shadow-xl shadow-primary/5"
+                    className="bg-white/80 dark:bg-background/40 backdrop-blur-xl border border-black/10 dark:border-white/10 p-8 sm:p-12 md:p-16 rounded-3xl shadow-xl shadow-primary/5 mx-2 sm:mx-0"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">
-                        Ready to <span className="text-gradient">Grow Your Business?</span>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 sm:mb-6 text-foreground">
+                        Ready to <br className="block sm:hidden" /> <span className="text-gradient">Grow Your Business?</span>
                     </h2>
-                    <p className="text-xl text-neutral-600 dark:text-neutral-300 mb-10 max-w-2xl mx-auto">
+                    <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 mb-8 sm:mb-10 max-w-2xl mx-auto">
                         Let's discuss how we can create a powerful digital presence that transforms visitors into loyal customers.
                     </p>
                     <Link

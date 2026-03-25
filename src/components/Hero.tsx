@@ -23,12 +23,12 @@ export function Hero() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto space-y-8"
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm text-neutral-600 dark:text-neutral-300 backdrop-blur-sm mb-4">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 backdrop-blur-sm mb-4">
                         <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         Digital Agency for Modern Brands
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight text-foreground">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-foreground px-2">
                         We Take Your Business <br className="hidden md:block" />
                         <span className="text-gradient">Online & Scale It</span>
                     </h1>
@@ -47,7 +47,7 @@ export function Hero() {
                         </Link>
 
                         <a
-                            href="https://wa.me/910000000000?text=Hi%20I%20want%20to%20grow%20my%20business%20online"
+                            href="https://wa.me/917208809892?text=Hi%20I%20want%20to%20grow%20my%20business%20online"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto px-8 py-4 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-foreground rounded-full font-medium transition-all flex items-center justify-center gap-2 group backdrop-blur-sm"
