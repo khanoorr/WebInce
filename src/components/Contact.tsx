@@ -127,7 +127,7 @@ export function Contact() {
                                             id="name"
                                             name="name"
                                             required
-                                            className="w-full bg-neutral-50 dark:bg-background border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
+                                            className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-primary transition-colors"
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -138,7 +138,7 @@ export function Contact() {
                                             id="email"
                                             name="email"
                                             required
-                                            className="w-full bg-neutral-50 dark:bg-background border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
+                                            className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-primary transition-colors"
                                             placeholder="john@example.com"
                                         />
                                     </div>
@@ -151,7 +151,7 @@ export function Contact() {
                                             type="tel"
                                             id="phone"
                                             name="phone"
-                                            className="w-full bg-neutral-50 dark:bg-background border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
+                                            className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-primary transition-colors"
                                             placeholder="+1 (555) 000-0000"
                                         />
                                     </div>
@@ -160,7 +160,7 @@ export function Contact() {
                                         <select
                                             id="service"
                                             name="service"
-                                            className="w-full bg-neutral-50 dark:bg-background border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors appearance-none"
+                                            className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-primary transition-colors appearance-none"
                                         >
                                             <option value="General Inquiry">General Inquiry</option>
                                             <option value="Website Development">Website Development</option>
@@ -178,7 +178,7 @@ export function Contact() {
                                         name="message"
                                         rows={4}
                                         required
-                                        className="w-full bg-neutral-50 dark:bg-background border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+                                        className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-primary transition-colors resize-none"
                                         placeholder="Tell us about your project..."
                                     />
                                 </div>

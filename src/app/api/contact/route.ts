@@ -23,6 +23,9 @@ export async function POST(request: Request) {
             headers: {
                 "Content-Type": "application/json",
                 Accept: "application/json",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Origin": "http://localhost:3000",
+                "Referer": "http://localhost:3000/"
             },
             body: JSON.stringify({
                 access_key: accessKey,
@@ -54,7 +57,7 @@ export async function POST(request: Request) {
     } catch (error) {
         console.error("Error processing contact form:", error);
         return NextResponse.json(
-            { error: "Internal server error" },
+            { error: "Internal server error", details: error instanceof Error ? error.message : String(error) },
             { status: 500 }
         );
     }
