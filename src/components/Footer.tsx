@@ -5,16 +5,17 @@ export function Footer() {
     return (
         <footer className="bg-background border-t border-black/10 dark:border-white/10 pt-16 pb-24 md:pb-12 text-center md:text-left">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
 
-                    <div className="md:col-span-1">
+                    {/* Brand - full width on mobile */}
+                    <div className="col-span-2 md:col-span-1">
                         <Link href="/" className="text-2xl font-bold tracking-tighter block mb-4">
                             Web<span className="text-primary">Ince</span>
                         </Link>
-                        <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+                        <p className="text-neutral-600 dark:text-neutral-400 mb-6 text-sm">
                             Empowering local businesses to thrive in the digital age with modern web solutions and proven marketing strategies.
                         </p>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 justify-center md:justify-start">
                             <a href="#" className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
                                 <Globe className="w-5 h-5" />
                             </a>
@@ -31,8 +32,8 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-foreground font-semibold mb-6">Services</h4>
-                        <ul className="space-y-3">
+                        <h4 className="text-foreground font-semibold mb-4 md:mb-6">Services</h4>
+                        <ul className="space-y-3 text-sm">
                             <li><Link href="#services" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Website Development</Link></li>
                             <li><Link href="#services" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">SEO Optimization</Link></li>
                             <li><Link href="#services" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Social Media Marketing</Link></li>
@@ -41,8 +42,8 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-foreground font-semibold mb-6">Company</h4>
-                        <ul className="space-y-3">
+                        <h4 className="text-foreground font-semibold mb-4 md:mb-6">Company</h4>
+                        <ul className="space-y-3 text-sm">
                             <li><Link href="#about" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="#work" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Our Work</Link></li>
                             <li><Link href="#testimonials" className="text-neutral-600 dark:text-neutral-400 hover:text-primary transition-colors">Testimonials</Link></li>
@@ -51,20 +52,20 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-foreground font-semibold mb-6">Contact Us</h4>
-                        <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
-                            <li className="flex items-center gap-2">
-                                <Mail className="w-4 h-4" />
-                                khanoorr3@gmail.com
+                        <h4 className="text-foreground font-semibold mb-4 md:mb-6">Contact Us</h4>
+                        <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
+                            <li className="flex items-center gap-2 justify-center md:justify-start">
+                                <Mail className="w-4 h-4 flex-shrink-0" />
+                                <span className="break-all">khanoorr3@gmail.com</span>
                             </li>
-                            <li>Sanjay Nagar,Malad East</li>
+                            <li>Sanjay Nagar, Malad East</li>
                             <li>Mumbai, MH 400097</li>
                         </ul>
                     </div>
 
                 </div>
 
-                <div className="pt-8 border-t border-black/10 dark:border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-neutral-500 text-sm gap-4">
+                <div className="pt-8 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center text-neutral-500 text-sm gap-3">
                     <p>&copy; {new Date().getFullYear()} WebInce Agency. All rights reserved.</p>
                     <div className="flex gap-4">
                         <Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</Link>
@@ -75,3 +76,4 @@ export function Footer() {
         </footer>
     );
 }
+
