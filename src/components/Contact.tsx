@@ -4,6 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle2, Loader2, Mail, Phone, MapPin } from "lucide-react";
 
+const WEB3FORMS_KEY = "c1cdcc2c-37c3-421a-a68b-35706fdcd538";
+
 export function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -15,30 +17,37 @@ export function Contact() {
         setError("");
 
         const formData = new FormData(e.currentTarget);
-        const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            phone: formData.get("phone"),
-            service: formData.get("service"),
-            message: formData.get("message"),
-        };
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `New Lead: ${formData.get("service") || "General Inquiry"} from ${formData.get("name")}`,
+                    from_name: formData.get("name"),
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    phone: formData.get("phone") || "Not provided",
+                    service_needed: formData.get("service"),
+                    message: formData.get("message"),
+                }),
             });
 
-            if (response.ok) {
+            const result = await response.json();
+
+            if (result.success) {
                 setSuccess(true);
                 (e.target as HTMLFormElement).reset();
-                setTimeout(() => setSuccess(false), 5000); // Hide success message after 5 seconds
+                setTimeout(() => setSuccess(false), 5000);
             } else {
-                setError("Failed to send message. Please try again.");
+                setError(result.message || "Failed to send message. Please try again.");
             }
         } catch (err) {
-            setError("An error occurred. Please try again.");
+            setError("An error occurred. Please check your connection and try again.");
         } finally {
             setIsSubmitting(false);
         }
