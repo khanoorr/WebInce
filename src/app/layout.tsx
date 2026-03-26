@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     creator: "@webince",
   },
   verification: {
-    google: "google-site-verification-add-your-code-here",
+    google: "v6StrFumkFjygsRrkF2zWeFlzVEPYoCo8imqRTSMC-o",
   },
   category: "technology",
 };
@@ -184,3 +184,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
